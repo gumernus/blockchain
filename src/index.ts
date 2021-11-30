@@ -45,4 +45,5 @@ if (chain.length > 0) {
 
 console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
 transferBlock(chain[1], chain, "sexy")
+transferBlock(chain[0], chain, "lmaoooo")
 console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
