@@ -7,12 +7,12 @@
 //TODO: přidat do block objektu objekt tradů
 
 import randomstring from "randomstring"
-import Block from "./block"
+import Block, { prevInterface } from "./block"
 
 let chain: Array<Block> = []
 
 if (chain.length === 0) {
-    let prev = {
+    let prev:prevInterface = {
         data: false,
         timestamp: false,
         order: false
@@ -23,12 +23,12 @@ if (chain.length === 0) {
     console.log(blok)
 }
 if (chain.length > 0) {
-    for (let i: number = 1; i <= 5; i++) {
+    for (let i: number = 1; i <= 3; i++) {
         let name: string = randomstring.generate({
             length: 12,
             charset: 'alphabetic'
         });
-        let prev = {
+        let prev:prevInterface = {
             data: chain[i - 1].data,
             timestamp: chain[i - 1].timestamp,
             order: chain[i - 1].order
@@ -40,4 +40,4 @@ if (chain.length > 0) {
     }
 }
 
-// console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
+console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
