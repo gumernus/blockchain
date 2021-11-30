@@ -5,9 +5,12 @@
 //TODO: hash funkce přímo do objektu plus salt 
 //TODO: hashovat pořadí bloku a timestamp
 //TODO: přidat do block objektu objekt tradů
+//TODO: update druhý blok podle toho jestli byl první blok updatnut
 
 import randomstring from "randomstring"
 import Block, { prevInterface } from "./block"
+import transferBlock from "./transfer"
+
 
 let chain: Array<Block> = []
 
@@ -18,12 +21,12 @@ if (chain.length === 0) {
         order: false
     }
 
-    let blok: Block = new Block("block-one", Date.now(), 0, prev)
+    let blok: Block = new Block("block-one", Date.now(), 0, [] ,prev)
     chain.push(blok)
-    console.log(blok)
+    // console.log(blok)
 }
 if (chain.length > 0) {
-    for (let i: number = 1; i <= 3; i++) {
+    for (let i: number = 1; i <= 2; i++) {
         let name: string = randomstring.generate({
             length: 12,
             charset: 'alphabetic'
@@ -34,10 +37,12 @@ if (chain.length > 0) {
             order: chain[i - 1].order
         }
 
-        let blok: Block = new Block(name, Date.now(), i, prev)
+        let blok: Block = new Block(name, Date.now(), i, [], prev)
         chain.push(blok)
         console.log(blok)
     }
 }
 
-// console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
+console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
+transferBlock(chain[1], chain, "sexy")
+console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
