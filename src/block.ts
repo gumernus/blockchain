@@ -9,9 +9,9 @@ export interface blockInterface {
 }
 
 export interface prevInterface {
-    data: string | boolean
-    timestamp: string | boolean
-    order: string | boolean
+    data: Block["data"] | boolean;
+    timestamp: Block["timestamp"] | boolean;
+    order: Block["order"] | boolean;
 }
 
 export default class Block implements blockInterface {
