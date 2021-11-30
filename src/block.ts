@@ -10,7 +10,7 @@ export default class Block {
         public data: string,
         public timestamp: number,
         public order: number,
-        public prev: Object
-
+        public transfers: Object,
+        public prev: prevInterface
     ) { }
 }
