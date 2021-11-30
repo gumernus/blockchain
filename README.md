@@ -52,3 +52,5 @@ Two conosles needed
  }
 ]
 ```
+## Disclaimer
+This repo is only for testing and for me to learn blockchain technology and learn typescript.
