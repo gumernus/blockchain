@@ -9,17 +9,9 @@
 //TODO: přidat do block objektu objekt tradů
 
 import randomstring from "randomstring"
+import Block from "./block"
 
 let chain = []
-
-class block {
-    constructor(
-        public data: string | boolean,
-        public prev: Object | boolean,
-        public timestamp: number | boolean,
-        public order: number | boolean
-    ){}
-}
 
 if (chain.length === 0){
     let prev = {
@@ -27,7 +19,7 @@ if (chain.length === 0){
         timestamp: false, 
         order: false}
         
-    let blok:any = new block("block-one", prev, Date.now(), 0)
+    let blok:any = new Block("block-one", prev, Date.now(), 0)
     chain.push(blok)
     console.log(blok)
 }
@@ -42,7 +34,7 @@ if (chain.length > 0){
             timestamp: chain[i-1].timestamp, 
             order: chain[i-1].order}
 
-        let blok:any = new block(name, prev, Date.now(), i)
+        let blok:any = new Block(name, prev, Date.now(), i)
         chain.push(blok)
        console.log(blok)
     }
