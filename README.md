@@ -12,43 +12,36 @@ Two conosles needed
 [
  {
   "data": "block-one",
+  "timestamp": 1638292512586,
+  "order": 0,
+  "transfers": [],
   "prev": {
    "data": false,
    "timestamp": false,
    "order": false
-  },
-  "timestamp": 1638285149755,
-  "order": 0
+  }
  },
  {
-  "data": "nYEEcEzMrPKn",
+  "data": "awpmYksgrcnz",
+  "timestamp": 1638292512587,
+  "order": 1,
+  "transfers": [],
   "prev": {
    "data": "block-one",
-   "timestamp": 1638285149755,
+   "timestamp": 1638292512586,
    "order": 0
-  },
-  "timestamp": 1638285149767,
-  "order": 1
+  }
  },
  {
-  "data": "aCFIeSllRnHu",
+  "data": "ATEpQpHEVQGV",
+  "timestamp": 1638292512602,
+  "order": 2,
+  "transfers": [],
   "prev": {
-   "data": "nYEEcEzMrPKn",
-   "timestamp": 1638285149767,
+   "data": "awpmYksgrcnz",
+   "timestamp": 1638292512587,
    "order": 1
-  },
-  "timestamp": 1638285149768,
-  "order": 2
- },
- {
-  "data": "UdrhYOAOttVl",
-  "prev": {
-   "data": "aCFIeSllRnHu",
-   "timestamp": 1638285149768,
-   "order": 2
-  },
-  "timestamp": 1638285149768,
-  "order": 3
+  }
  }
 ]
 ```
