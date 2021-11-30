@@ -1,7 +1,7 @@
 # Gumernus's Blockchain
 ## Requirements
 - tsc
-- node
+- node / nodemon
 ## Run
 Two conosles needed
 - `tsc -w` run typescript in watch mode
