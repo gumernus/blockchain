@@ -1,4 +1,3 @@
-
 export interface prevInterface {
     data: Block["data"] | boolean;
     timestamp: Block["timestamp"] | boolean;
@@ -10,7 +9,7 @@ export default class Block {
         public data: string,
         public timestamp: number,
         public order: number,
-        public transfers: Object,
+        public transfers: Array<Object>,
         public prev: prevInterface
     ) { }
 }
