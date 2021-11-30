@@ -18,7 +18,7 @@ if (chain.length === 0) {
         order: false
     }
 
-    let blok: Block = new Block("block-one", prev, Date.now(), 0)
+    let blok: Block = new Block("block-one", Date.now(), 0, prev)
     chain.push(blok)
     console.log(blok)
 }
@@ -34,10 +34,10 @@ if (chain.length > 0) {
             order: chain[i - 1].order
         }
 
-        let blok: Block = new Block(name, prev, Date.now(), i)
+        let blok: Block = new Block(name, Date.now(), i, prev)
         chain.push(blok)
         console.log(blok)
     }
 }
 
-console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
+// console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
