@@ -6,7 +6,7 @@
 //TODO: hashovat pořadí bloku a timestamp
 //TODO: update druhý blok podle toho jestli byl první blok updatnut
 //TODO: public, private key
-//TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } body{ transaction data }}
+//TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } transactions{ from, to, amount }}
 
 import randomstring from "randomstring"
 import Block, { prevInterface } from "./block"
