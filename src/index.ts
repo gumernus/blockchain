@@ -4,8 +4,9 @@
 //TODO: uspořádat syntax a lépe rozdělit funkce
 //TODO: hash funkce přímo do objektu plus salt 
 //TODO: hashovat pořadí bloku a timestamp
-//TODO: přidat do block objektu objekt tradů
 //TODO: update druhý blok podle toho jestli byl první blok updatnut
+//TODO: public, private key
+//TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } body{ transaction data }}
 
 import randomstring from "randomstring"
 import Block, { prevInterface } from "./block"
@@ -26,7 +27,7 @@ if (chain.length === 0) {
     // console.log(blok)
 }
 if (chain.length > 0) {
-    for (let i: number = 1; i <= 2; i++) {
+    for (let i: number = 1; i <= 4; i++) {
         let name: string = randomstring.generate({
             length: 12,
             charset: 'alphabetic'
@@ -39,11 +40,11 @@ if (chain.length > 0) {
 
         let blok: Block = new Block(name, Date.now(), i, [], prev)
         chain.push(blok)
-        console.log(blok)
+        // console.log(blok)
     }
 }
 
-console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
+
 transferBlock(chain[1], chain, "sexy")
-transferBlock(chain[0], chain, "lmaoooo")
-console.log("CHAIN: \n" + JSON.stringify(chain, null, ' '))
+console.log(chain)
+
