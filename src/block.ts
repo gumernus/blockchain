@@ -43,7 +43,8 @@ export interface BlockTransactions {
 
 export class NewBlock{ //přidat default
     constructor(
-        
+        public header: BlockHeader,
+        public transactions: Array<BlockTransactions>
     ){ }
 }
 
