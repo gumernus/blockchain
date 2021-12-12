@@ -19,7 +19,7 @@ export default class Block {
 
 // NEW STUFF
 
-//TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } transactions{ from, to, amount }}
+//TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, hash } transactions{ from, to }}
 
 export interface BlockPrev {
     version: BlockHeader["version"];
@@ -33,10 +33,12 @@ export interface BlockHeader {
     prev: BlockPrev;
     timestamp: number;
     nonce: number;
+    mediaurl: string //obrázek atd
 }
 
 export interface BlockTransactions {
-    
+    from: string //user 1
+    to: string //user 2
 }
 
 export class NewBlock{ //přidat default
