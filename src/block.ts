@@ -22,23 +22,30 @@ export default class Block {
 //TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } transactions{ from, to, amount }}
 
 export interface BlockPrev {
-    data: Block["data"] | boolean;
-    timestamp: Block["timestamp"] | boolean;
-    order: Block["order"] | boolean;
+    version: BlockHeader["version"];
+    hash: BlockHeader["hash"];
+    timestamp: BlockHeader["timestamp"];
 }
 
 export interface BlockHeader {
     version: number; 
+    hash: string;
     prev: BlockPrev;
-
+    timestamp: number;
+    nonce: number;
 }
 
 export interface BlockTransactions {
-
+    
 }
 
-export class newBlock{ //přidat default
+export class NewBlock{ //přidat default
     constructor(
         
     ){ }
 }
+
+
+
+
+
