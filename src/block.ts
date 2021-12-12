@@ -19,6 +19,24 @@ export default class Block {
 
 // NEW STUFF
 
+//TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } transactions{ from, to, amount }}
+
+export interface BlockPrev {
+    data: Block["data"] | boolean;
+    timestamp: Block["timestamp"] | boolean;
+    order: Block["order"] | boolean;
+}
+
+export interface BlockHeader {
+    version: number; 
+    prev: BlockPrev;
+
+}
+
+export interface BlockTransactions {
+
+}
+
 export class newBlock{ //přidat default
     constructor(
         
