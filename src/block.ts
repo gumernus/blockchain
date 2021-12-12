@@ -13,3 +13,14 @@ export default class Block {
         public prev: prevInterface
     ) { }
 }
+
+
+
+
+// NEW STUFF
+
+export class newBlock{ //přidat default
+    constructor(
+        
+    ){ }
+}
