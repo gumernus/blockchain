@@ -7,6 +7,10 @@
 //TODO: update druhý blok podle toho jestli byl první blok updatnut
 //TODO: public, private key
 //TODO: UPDATE STRUKTURY BLOKU ==> { header:{ version, prev, timestamp, nonce, merkle root } transactions{ from, to, amount }}
+//TODO: first block => genesis block
+//TODO: změnit transakce => pokud se nějkaý blok změní ten před ním to nebude registrovat
+//TODO: block validation pokud se nějkaý block změní bude to hned zjištěno
+//TODO: P2P network
 
 import randomstring from "randomstring"
 import Block, { prevInterface } from "./block"
