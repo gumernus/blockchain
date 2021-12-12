@@ -26,7 +26,7 @@ if (chain.length === 0) {
         order: false
     }
 
-    let blok: Block = new Block("block-one", Date.now(), 0, [] ,prev)
+    let blok: Block = new Block("genesis-block", Date.now(), 0, [] ,prev)
     chain.push(blok)
     // console.log(blok)
 }
