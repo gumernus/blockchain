@@ -1,5 +1,4 @@
 //TODO: dát chain jako samostatnou class
-//TODO: rozdělit do více souborů
 //TODO: první blok chainu se vždy updatuje podle toho jaký je poslední blok (last "data" = first "prev")
 //TODO: uspořádat syntax a lépe rozdělit funkce
 //TODO: hash funkce přímo do objektu plus salt 
