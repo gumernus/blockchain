@@ -1,4 +1,4 @@
-# Gumernus's NFT blockchain
+# Gumernus's NFT blockchain (WILL BE RECREATED IN C++)
 
 ## Table of Contents
 
